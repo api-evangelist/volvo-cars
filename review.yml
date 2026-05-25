@@ -1,0 +1,225 @@
+executed: '2026-05-25T00:00:00.000Z'
+results:
+  - code: apis-json-specification-aid-info
+    message: There is an aid.
+    path:
+      - aid
+    severity: 2
+  - code: apis-json-url-info
+    message: There is a URL.
+    path:
+      - url
+    severity: 2
+  - code: apis-json-apis-info
+    message: Has APIs
+    path:
+      - apis
+    severity: 2
+  - code: apis-json-apis-baseURL-info
+    message: APIs have a Base URL
+    path:
+      - apis
+    severity: 2
+  - code: apis-json-apis-aid-info
+    message: API has an aid property.
+    path:
+      - apis
+      - '0'
+      - aid
+    severity: 2
+  - code: apis-json-apis-name-info
+    message: Has a Name
+    path:
+      - apis
+      - '0'
+      - name
+    severity: 2
+  - code: apis-json-apis-tags-info
+    message: API Have a Tags Object
+    path:
+      - apis
+      - '0'
+      - tags
+    severity: 2
+  - code: apis-json-apis-tags-upper-case-info
+    message: API Tags are Title Case
+    path:
+      - apis
+      - '0'
+      - tags
+    severity: 2
+  - code: apis-json-apis-humanURL-info
+    message: Has a Human URL
+    path:
+      - apis
+      - '0'
+      - humanURL
+    severity: 2
+  - code: apis-json-apis-properties-openapi-info
+    message: Has an OpenAPI property reference
+    path:
+      - apis
+      - '0'
+      - properties
+    severity: 2
+  - code: apis-json-apis-properties-documentation-info
+    message: Has Documentation
+    path:
+      - apis
+      - '0'
+      - properties
+    severity: 2
+  - code: apis-json-apis-description-info
+    message: Has a Description
+    path:
+      - apis
+      - '0'
+      - description
+    severity: 2
+  - code: apis-json-name-info
+    message: There is a name.
+    path:
+      - name
+    severity: 2
+  - code: apis-json-tags-info
+    message: There is a Tags Object
+    path:
+      - tags
+    severity: 2
+  - code: apis-json-tags-upper-case-info
+    message: Tags Title Case
+    path:
+      - tags
+    severity: 2
+  - code: apis-json-specification-type-info
+    message: There is a specification type.
+    path:
+      - kind
+    severity: 2
+  - code: apis-json-image-info
+    message: There is an image.
+    path:
+      - image
+    severity: 2
+  - code: apis-json-common-info
+    message: There is a common property.
+    path:
+      - common
+    severity: 2
+  - code: apis-json-common-portal-info
+    message: Has a Developer Portal link
+    path:
+      - common
+    severity: 2
+  - code: apis-json-common-getting-started-info
+    message: Has a Getting Started link
+    path:
+      - common
+    severity: 2
+  - code: apis-json-common-authentication-info
+    message: Has Authentication documentation
+    path:
+      - common
+    severity: 2
+  - code: apis-json-common-plans-info
+    message: Has Plans documentation
+    path:
+      - common
+    severity: 2
+  - code: apis-json-common-rate-limits-info
+    message: Has Rate Limits documentation
+    path:
+      - common
+    severity: 2
+  - code: apis-json-common-regions-info
+    message: Has Regions documentation
+    path:
+      - common
+    severity: 2
+  - code: apis-json-common-terms-of-service-info
+    message: Has an API Terms of Service
+    path:
+      - common
+    severity: 2
+  - code: apis-json-common-privacy-policy-info
+    message: Has a Privacy Policy
+    path:
+      - common
+    severity: 2
+  - code: apis-json-common-github-org-info
+    message: Has a GitHub organization link
+    path:
+      - common
+    severity: 2
+  - code: apis-json-common-code-examples-info
+    message: Has code examples
+    path:
+      - common
+    severity: 2
+  - code: apis-json-common-features-info
+    message: Has Features
+    path:
+      - common
+    severity: 2
+  - code: apis-json-common-support-info
+    message: Has Support
+    path:
+      - common
+    severity: 2
+  - code: apis-json-common-blog-info
+    message: Has a Blog / News link
+    path:
+      - common
+    severity: 2
+  - code: apis-json-created-info
+    message: There is a created date.
+    path:
+      - created
+    severity: 2
+  - code: apis-json-modified-info
+    message: There is a modified date.
+    path:
+      - modified
+    severity: 2
+  - code: apis-json-description-info
+    message: There is a description.
+    path:
+      - description
+    severity: 2
+  - code: apis-json-maintainers-info
+    message: There is a maintainer object.
+    path:
+      - maintainers
+    severity: 2
+  - code: apis-json-maintainers-fn-info
+    message: There is a FN property for maintainers.
+    path:
+      - maintainers
+      - '0'
+      - FN
+    severity: 2
+  - code: apis-json-maintainers-email-info
+    message: There is a email property for maintainers.
+    path:
+      - maintainers
+      - '0'
+      - email
+    severity: 2
+  - code: apis-json-specification-version-info
+    message: There is a specification version.
+    path:
+      - specificationVersion
+    severity: 2
+tier: 1
+notes:
+  - Real public API surface (Connected Vehicle v2, Energy v2, Location v1, Energy Device v1) with
+    downloadable OpenAPI specifications and dedicated endpoints/sandbox docs per API.
+  - OAuth 2.0 against Volvo ID with explicit per-vehicle owner consent; VCC-API-Key client identifier
+    on every request.
+  - Documented rate limits (100 rpm read, 10 rpm commands, 10,000 calls/day per app), regional
+    availability, and per-model car-support matrix.
+  - Free public access under the API-specific agreement, with reserved right to introduce paid tiers.
+  - Active open-source program at github.com/volvo-cars including official API code samples
+    (developer-portal-api-samples) and Android Automotive samples.
+  - Manual app-publishing review (14-21 days) for production credentials is the main friction point;
+    no public status page or formal changelog/release-notes feed surfaced from the portal.
