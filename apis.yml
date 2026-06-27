@@ -165,7 +165,7 @@ common:
   type: Documentation
 - url: https://developer.volvocars.com/in-car-apps/android-emulator-xc40/
   name: Volvo XC40 Recharge Android Automotive Emulator
-  type: Tool
+  type: Tools
 - url: https://developer.android.com/cars
   name: Android for Cars (Google)
   type: Documentation
