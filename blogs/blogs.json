@@ -3,10 +3,9 @@
   "feeds": [
     {
       "source": "https://developer.volvocars.com/news/",
-      "saved": 0,
-      "error": "HTTP 403 Forbidden"
+      "error": "HTTPError"
     }
   ],
-  "fetched": "2026-06-27T13:20:41Z",
+  "fetched": "2026-07-11T11:50:51Z",
   "post_count": 0
 }
