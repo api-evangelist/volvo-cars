@@ -21,14 +21,13 @@ apis:
   - url: https://github.com/volvo-cars/developer-portal-api-samples/tree/main/connected-vehicle-fetch-sample
     name: Connected Vehicle Fetch Sample
     type: CodeExamples
-  description: Receive vehicle data and send commands to the vehicle. Vehicle data covers status,
-    diagnostics, statistics, and metadata — including odometer, fuel amount, tyre pressures, brake
-    status, engine status, window status, warnings, and environment values. Commands include lock /
-    unlock, climate start / stop, flash lights, sound horn, and engine start / stop, with a list-commands
-    endpoint to discover which actions a given vehicle supports. Available on vehicles with Volvo On
-    Call (model years 2010-2024) and on Google Built-In vehicles from model year 2020. Rate-limited to
-    100 requests/min per Volvo ID + Client ID (10 requests/min for invocation/command endpoints) and
-    10,000 calls per day per API key.
+  description: Receive vehicle data and send commands to the vehicle. Vehicle data covers status, diagnostics,
+    statistics, and metadata — including odometer, fuel amount, tyre pressures, brake status, engine status,
+    window status, warnings, and environment values. Commands include lock / unlock, climate start / stop,
+    flash lights, sound horn, and engine start / stop, with a list-commands endpoint to discover which
+    actions a given vehicle supports. Available on vehicles with Volvo On Call (model years 2010-2024)
+    and on Google Built-In vehicles from model year 2020. Rate-limited to 100 requests/min per Volvo ID
+    + Client ID (10 requests/min for invocation/command endpoints) and 10,000 calls per day per API key.
 - aid: volvo-cars:volvo-cars-energy-api
   name: Volvo Cars Energy API
   tags:
@@ -44,13 +43,13 @@ apis:
     type: Documentation
   - url: https://developer.volvocars.com/apis/energy/v2/specification/
     type: OpenAPI
-  description: Access the most recent energy state of a BEV or PHEV — battery charge level, target
-    battery charge level, charging connection status, charging system status, charging type, charging
-    power, charger power status, charging current limit, estimated charging time, and electric range.
-    A capabilities endpoint reports what each vehicle supports. Available for EC40/C40, EX40/XC40 BEV,
-    EX30, and the broader plug-in hybrid lineup (XC60/S90/V90 PHEV from MY 2022, XC90/S60/V60 PHEV from
-    MY 2023, plus XC40 PHEV). Rate-limited to 100 requests/min per Volvo ID + Client ID and 10,000
-    calls per day per API key.
+  description: Access the most recent energy state of a BEV or PHEV — battery charge level, target battery
+    charge level, charging connection status, charging system status, charging type, charging power, charger
+    power status, charging current limit, estimated charging time, and electric range. A capabilities
+    endpoint reports what each vehicle supports. Available for EC40/C40, EX40/XC40 BEV, EX30, and the
+    broader plug-in hybrid lineup (XC60/S90/V90 PHEV from MY 2022, XC90/S60/V60 PHEV from MY 2023, plus
+    XC40 PHEV). Rate-limited to 100 requests/min per Volvo ID + Client ID and 10,000 calls per day per
+    API key.
 - aid: volvo-cars:volvo-cars-location-api
   name: Volvo Cars Location API
   tags:
@@ -68,10 +67,10 @@ apis:
   - url: https://developer.volvocars.com/apis/location/v1/endpoints/
     type: Documentation
   description: Retrieve detailed information on a vehicle's current location. Designed for interactive
-    applications that need to know where a consenting driver's Volvo is right now. Same regional
-    availability and rate-limit profile as Connected Vehicle and Energy — 10,000 calls per day per API
-    key and 100 requests/min per Volvo ID + Client ID. Production access is currently scoped to Europe /
-    Middle East / Africa and US / Canada / Latin America regions.
+    applications that need to know where a consenting driver's Volvo is right now. Same regional availability
+    and rate-limit profile as Connected Vehicle and Energy — 10,000 calls per day per API key and 100
+    requests/min per Volvo ID + Client ID. Production access is currently scoped to Europe / Middle East
+    / Africa and US / Canada / Latin America regions.
 - aid: volvo-cars:volvo-cars-energy-device-api
   name: Volvo Cars Energy Device API
   tags:
@@ -86,10 +85,9 @@ apis:
     type: Documentation
   - url: https://developer.volvocars.com/apis/energy-device-api/v1/endpoints/
     type: Documentation
-  description: API for managing wallboxes, charging sessions, and user ID tokens — the device-side
-    counterpart to the vehicle-side Energy API. Enables integrations that pair a home charger or
-    public charging device with a Volvo driver's identity for charging session orchestration and
-    reporting.
+  description: API for managing wallboxes, charging sessions, and user ID tokens — the device-side counterpart
+    to the vehicle-side Energy API. Enables integrations that pair a home charger or public charging device
+    with a Volvo driver's identity for charging session orchestration and reporting.
 name: Volvo Cars
 tags:
 - Automotive
@@ -126,6 +124,8 @@ accessModel:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/volvo-cars.png
 access: 3rd-Party
 common:
+- type: Website
+  url: https://volvocars.com
 - type: DomainSecurity
   url: security/volvo-cars-domain-security.yml
 - url: https://developer.volvocars.com/
@@ -217,8 +217,8 @@ common:
       are issued automatically; full production credentials require manual review and app publication
       (typically 14-21 days).
   - name: VCC-API-Key Header
-    description: Every API request must include the application's VCC-API-Key header (the primary
-      client identifier) in addition to the OAuth access token.
+    description: Every API request must include the application's VCC-API-Key header (the primary client
+      identifier) in addition to the OAuth access token.
 - type: Plans
   data:
   - id: free
@@ -230,8 +230,8 @@ common:
       price: 0
       metric: api
       timeFrame: usage
-      description: All APIs on the Volvo Cars Developer Portal are official public APIs and free to
-        use. Volvo Cars expressly reserves the right to introduce paid tiers in the future.
+      description: All APIs on the Volvo Cars Developer Portal are official public APIs and free to use.
+        Volvo Cars expressly reserves the right to introduce paid tiers in the future.
     description: Free public access to the Connected Vehicle, Energy, Energy Device, and Location APIs
       under the API-specific agreement, subject to rate limits and app-publishing review.
 - type: RateLimits
@@ -259,33 +259,32 @@ common:
   - region: US / Canada / Latin America
     description: Available for published applications (Connected Vehicle, Energy, and Location APIs).
   - region: Other regions
-    description: Not yet supported in production. Volvo Cars is working to bring additional regions
-      online.
+    description: Not yet supported in production. Volvo Cars is working to bring additional regions online.
 - type: Features
   data:
-  - Connected Vehicle API v2 — read vehicle status, diagnostics, statistics, and metadata, and send
-    commands (lock/unlock, climate start/stop, flash lights, sound horn, engine start/stop) backed by
-    a public OpenAPI specification.
-  - Energy API v2 — latest energy state for BEV and PHEV models, including battery level, charging
-    status, charging power, estimated charging time, and electric range, plus a capabilities endpoint.
-  - Energy Device API v1 — wallbox, charging session, and user-ID-token management for the device
-    side of charging.
+  - Connected Vehicle API v2 — read vehicle status, diagnostics, statistics, and metadata, and send commands
+    (lock/unlock, climate start/stop, flash lights, sound horn, engine start/stop) backed by a public
+    OpenAPI specification.
+  - Energy API v2 — latest energy state for BEV and PHEV models, including battery level, charging status,
+    charging power, estimated charging time, and electric range, plus a capabilities endpoint.
+  - Energy Device API v1 — wallbox, charging session, and user-ID-token management for the device side
+    of charging.
   - Location API v1 — current vehicle location for interactive applications.
   - OAuth 2.0 authorization-code flow against Volvo ID with explicit per-vehicle owner consent.
   - VCC-API-Key client identifier required on every request alongside the OAuth bearer token.
-  - Public OpenAPI specifications downloadable per API, plus an in-portal sandbox using a demo Volvo
-    ID account.
-  - Rate limits exposed and documented (100 rpm per user/app, 10 rpm for commands, 10,000 calls/day
-    per app).
+  - Public OpenAPI specifications downloadable per API, plus an in-portal sandbox using a demo Volvo ID
+    account.
+  - Rate limits exposed and documented (100 rpm per user/app, 10 rpm for commands, 10,000 calls/day per
+    app).
   - Manual app-publishing review (14-21 days) to grant production credentials, reflecting Volvo Cars'
     explicit privacy and safety stance.
-  - Open-source code samples (Node.js OAuth2 code flow, Connected Vehicle data fetch) on the Volvo
-    Cars GitHub organization.
-  - In-car app development on Android Automotive OS, with an official Volvo XC40 Recharge emulator
-    and Android-for-Cars tooling.
+  - Open-source code samples (Node.js OAuth2 code flow, Connected Vehicle data fetch) on the Volvo Cars
+    GitHub organization.
+  - In-car app development on Android Automotive OS, with an official Volvo XC40 Recharge emulator and
+    Android-for-Cars tooling.
   - 3D assets and a Volvo simulator surface for digital and immersive product experiences.
-  - Open Source Program Office and an active GitHub organization (developer-portal-api-samples,
-    automotive-media-sample, web-platform-examples, and more).
+  - Open Source Program Office and an active GitHub organization (developer-portal-api-samples, automotive-media-sample,
+    web-platform-examples, and more).
   sources:
   - https://developer.volvocars.com/apis/
   - https://developer.volvocars.com/apis/connected-vehicle/v2/overview/
@@ -299,16 +298,16 @@ common:
   - https://github.com/volvo-cars
   updated: '2026-05-25'
 created: '2026-05-25T00:00:00.000Z'
-modified: '2026-05-25'
+modified: '2026-09-16'
 position: Producing
-description: Volvo Cars is a Swedish premium automotive OEM (headquartered in Gothenburg, owned by
-  Geely) that operates the Volvo Cars Developer Portal as the public face of its connected-vehicle
-  platform. The portal exposes the Connected Vehicle API, Energy API, Energy Device API, and Location
-  API for third-party developers to build applications around real Volvo cars equipped with Volvo On
-  Call or Google Built-In. APIs use OAuth 2.0 against Volvo ID with explicit owner consent, a
-  VCC-API-Key client identifier, and a free tier capped at 10,000 calls per day per app. The portal
-  also covers Android Automotive in-car app development with an official XC40 Recharge emulator, 3D
-  assets and simulator resources, and an active open-source program at github.com/volvo-cars.
+description: Volvo Cars is a Swedish premium automotive OEM (headquartered in Gothenburg, owned by Geely)
+  that operates the Volvo Cars Developer Portal as the public face of its connected-vehicle platform.
+  The portal exposes the Connected Vehicle API, Energy API, Energy Device API, and Location API for third-party
+  developers to build applications around real Volvo cars equipped with Volvo On Call or Google Built-In.
+  APIs use OAuth 2.0 against Volvo ID with explicit owner consent, a VCC-API-Key client identifier, and
+  a free tier capped at 10,000 calls per day per app. The portal also covers Android Automotive in-car
+  app development with an official XC40 Recharge emulator, 3D assets and simulator resources, and an active
+  open-source program at github.com/volvo-cars.
 maintainers:
 - FN: Kin Lane
   email: info@apievangelist.com
