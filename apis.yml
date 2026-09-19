@@ -5,6 +5,12 @@ apis:
   name: Volvo Cars Connected Vehicle API
   tags:
   - Automotive
+  - Connected Vehicles
+  - Vehicle Data
+  - Vehicle Commands
+  - Telematics
+  tags_raw:
+  - Automotive
   - Connected Vehicle
   - Vehicle Data
   - Vehicle Commands
@@ -90,6 +96,15 @@ apis:
     with a Volvo driver's identity for charging session orchestration and reporting.
 name: Volvo Cars
 tags:
+- Automotive
+- Connected Vehicles
+- Electric Vehicles
+- Telematics
+- Android Automotive
+- OEM
+- Mobility
+- Sweden
+tags_raw:
 - Automotive
 - Connected Vehicle
 - Electric Vehicles
