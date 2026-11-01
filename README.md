@@ -1,4 +1,4 @@
-# Volvo Cars (volvo-cars)
+# Volvo Cars
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,121 +66,90 @@
 
 Volvo Cars is a Swedish premium automotive OEM (headquartered in Gothenburg, owned by Geely) that operates the Volvo Cars Developer Portal as the public face of its connected-vehicle platform. The portal exposes the Connected Vehicle API, Energy API, Energy Device API, and Location API for third-party developers to build applications around real Volvo cars equipped with Volvo On Call or Google Built-In. APIs use OAuth 2.0 against Volvo ID with explicit owner consent, a VCC-API-Key client identifier, and a free tier capped at 10,000 calls per day per app. The portal also covers Android Automotive in-car app development with an official XC40 Recharge emulator, 3D assets and simulator resources, and an active open-source program at github.com/volvo-cars.
 
-**URL:** [Visit APIs.json](https://raw.githubusercontent.com/api-evangelist/volvo-cars/refs/heads/main/apis.yml)
+**Areas:** Automotive · Connected Vehicles · Electric Vehicles · Telematics · Android Automotive · OEM · Mobility · Sweden
 
-**Run:** [Capabilities Using Naftiko](https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=company-api-evangelist&utm_content=repo)
+## Volvo Cars on APIs.io
 
-## Tags
+Everything profiled for Volvo Cars is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/volvo-cars/](https://apis.io/providers/volvo-cars/)** — or go straight to one of the APIs or properties below.
 
- - Automotive, Connected Vehicle, Electric Vehicles, Telematics, Android Automotive, OEM, Mobility
+### APIs (4)
 
-## Timestamps
+- [Volvo Cars Connected Vehicle API](https://apis.io/apis/volvo-cars/volvo-cars-connected-vehicle-api/) — Receive vehicle data and send commands to the vehicle. Vehicle data covers status, diagnostics, statistics, and metadata — including odometer, fuel amount,…
+- [Volvo Cars Energy API](https://apis.io/apis/volvo-cars/volvo-cars-energy-api/) — Access the most recent energy state of a BEV or PHEV — battery charge level, target battery charge level, charging connection status, charging system…
+- [Volvo Cars Location API](https://apis.io/apis/volvo-cars/volvo-cars-location-api/) — Retrieve detailed information on a vehicle's current location. Designed for interactive applications that need to know where a consenting driver's Volvo is…
+- [Volvo Cars Energy Device API](https://apis.io/apis/volvo-cars/volvo-cars-energy-device-api/) — API for managing wallboxes, charging sessions, and user ID tokens — the device-side counterpart to the vehicle-side Energy API. Enables integrations that…
 
-- **Created:** 2026-05-25
-- **Modified:** 2026-05-25
+### Published properties
 
-## APIs
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-### Volvo Cars Connected Vehicle API
-Receive vehicle data and send commands to the vehicle. Vehicle data covers status, diagnostics, statistics, and metadata — odometer, fuel amount, tyre pressures, brake status, engine status, window status, warnings, environment values. Commands include lock/unlock, climate start/stop, flash lights, sound horn, and engine start/stop, with a `list-commands` endpoint to discover what a given vehicle supports. Available on Volvo On Call vehicles (MY 2010-2024) and Google Built-In vehicles (MY 2020+).
+#### Security (1)
 
-**Human URL:** [https://developer.volvocars.com/apis/connected-vehicle/v2/overview/](https://developer.volvocars.com/apis/connected-vehicle/v2/overview/)
-**Base URL:** `https://api.volvocars.com/connected-vehicle/v2`
+Authentication, trust centre, and vulnerability disclosure.
 
-- [Documentation](https://developer.volvocars.com/apis/connected-vehicle/v2/overview/)
-- [OpenAPI](https://developer.volvocars.com/apis/connected-vehicle/v2/specification/)
-- [Endpoints](https://developer.volvocars.com/apis/connected-vehicle/v2/endpoints/)
-- [Code Examples — Connected Vehicle Fetch Sample](https://github.com/volvo-cars/developer-portal-api-samples/tree/main/connected-vehicle-fetch-sample)
+- [Volvo Cars Domain Security](https://apis.io/security/volvo-cars/volvo-cars-domain-security/)
 
-### Volvo Cars Energy API
-Latest energy state for BEV and PHEV models: battery charge level, target battery charge level, charging connection status, charging system status, charging type, charging power, charger power status, charging current limit, estimated charging time, and electric range. Includes a capabilities endpoint that reports per-vehicle support. Supported models include EC40/C40, EX40/XC40 BEV, EX30, and the PHEV lineup (XC60/S90/V90 PHEV MY 2022+, XC90/S60/V60 PHEV MY 2023+, plus XC40 PHEV).
+## Where to find this API
 
-**Human URL:** [https://developer.volvocars.com/apis/energy/v2/overview/](https://developer.volvocars.com/apis/energy/v2/overview/)
-**Base URL:** `https://api.volvocars.com/energy/v2`
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-- [Documentation](https://developer.volvocars.com/apis/energy/v2/overview/)
-- [OpenAPI](https://developer.volvocars.com/apis/energy/v2/specification/)
+- [Website](https://volvocars.com)
+- [Documentation](https://developer.volvocars.com/apis/)
+- [Getting started](https://developer.volvocars.com/apis/docs/getting-started/)
+- [Blog](https://developer.volvocars.com/news/)
+- [Terms of service](https://developer.volvocars.com/terms-and-conditions/)
+- [Privacy policy](https://developer.volvocars.com/cookies/)
+- [GitHub](https://github.com/volvo-cars)
 
-### Volvo Cars Location API
-Detailed information on a vehicle's current location, intended for interactive applications. Same OAuth flow, VCC-API-Key, and rate-limit profile as Connected Vehicle and Energy.
+## API Evangelist rating
 
-**Human URL:** [https://developer.volvocars.com/apis/location/v1/overview/](https://developer.volvocars.com/apis/location/v1/overview/)
-**Base URL:** `https://api.volvocars.com/location/v1`
+**Kin Score 29.5** — thin · rubric 0.24.0 · scored 2026-10-17
 
-- [Documentation](https://developer.volvocars.com/apis/location/v1/overview/)
-- [OpenAPI](https://developer.volvocars.com/apis/location/v1/specification/)
-- [Endpoints](https://developer.volvocars.com/apis/location/v1/endpoints/)
-
-### Volvo Cars Energy Device API
-The device-side counterpart to the vehicle-side Energy API — manage wallboxes, charging sessions, and user ID tokens for end-to-end charging integrations.
-
-**Human URL:** [https://developer.volvocars.com/apis/energy-device-api/v1/overview/](https://developer.volvocars.com/apis/energy-device-api/v1/overview/)
-
-- [Documentation](https://developer.volvocars.com/apis/energy-device-api/v1/overview/)
-- [Endpoints](https://developer.volvocars.com/apis/energy-device-api/v1/endpoints/)
-
-## Authentication
-
-- **OAuth 2.0 Authorization Code Flow** against Volvo ID. Explicit consent from the vehicle owner is required before an application can access their data. Test credentials are automatic; production credentials are granted after Volvo Cars manually reviews and publishes the app (typically 14-21 days).
-- **VCC-API-Key** header — the application's primary client identifier, required on every request alongside the OAuth bearer token.
-
-## Pricing
-
-All APIs are free to use under the [APIs Terms and Conditions](https://developer.volvocars.com/terms-and-conditions/apis-terms-and-conditions/) (last updated 2026-01-27). Volvo Cars expressly reserves the right to introduce paid tiers in the future.
-
-## Rate Limits
-
-| Surface | Limit |
+| Facet | Score |
 |---|---|
-| Connected Vehicle API (read) | 100 req/min per Volvo ID + Client ID |
-| Connected Vehicle API (commands) | 10 req/min per Volvo ID + Client ID |
-| Energy API | 100 req/min per Volvo ID + Client ID |
-| Location API | 100 req/min per Volvo ID + Client ID |
-| Per-app daily cap (all APIs) | 10,000 calls / day (higher available on request) |
+| Discoverability | 62.5 |
+| Contract quality | 30.5 |
+| Contract governance | 0.0 |
+| Operational transparency | 5.3 |
+| Developer ergonomics | 50.0 |
+| Access clarity | 21.1 |
 
-Exceeding a limit returns HTTP `429`.
+**Agent readiness 19.2** — agent-aware
 
-## Regional Availability
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | documented (partial credit) |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
 
-- **Test:** demo Volvo IDs work globally.
-- **Production:** Europe / Middle East / Africa and US / Canada / Latin America. Other regions are not yet supported.
+**Regulatory alignment 19.6** — Horizontal (data, software, accessibility, platform)
 
-## Developer Resources
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/volvo-cars/](https://apis.io/providers/volvo-cars/).
 
-- [Volvo Cars Developer Portal](https://developer.volvocars.com/)
-- [APIs Overview](https://developer.volvocars.com/apis/)
-- [Getting Started](https://developer.volvocars.com/apis/docs/getting-started/)
-- [Authorisation](https://developer.volvocars.com/apis/docs/authorisation/)
-- [Test Access Tokens](https://developer.volvocars.com/apis/docs/test-access-tokens/)
-- [Observability](https://developer.volvocars.com/apis/docs/observability/)
-- [In-Car Apps (Android Automotive)](https://developer.volvocars.com/in-car-apps/)
-- [Volvo XC40 Recharge Android Automotive Emulator](https://developer.volvocars.com/in-car-apps/android-emulator-xc40/)
-- [3D Assets and Simulator](https://developer.volvocars.com/3d/)
-- [Open Source](https://developer.volvocars.com/open-source/)
-- [News](https://developer.volvocars.com/news/)
-- [Supported Locations](https://developer.volvocars.com/terms-and-conditions/apis-supported-locations/)
-- [APIs Terms and Conditions](https://developer.volvocars.com/terms-and-conditions/apis-terms-and-conditions/)
+## How this profile is made
 
-## GitHub
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
 
-[github.com/volvo-cars](https://github.com/volvo-cars) hosts the official Volvo Cars open-source program. Notable repos:
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Volvo Cars: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
 
-- [`developer-portal-api-samples`](https://github.com/volvo-cars/developer-portal-api-samples) — OAuth2 code flow and Connected Vehicle fetch samples (Node.js).
-- [`automotive-media-sample`](https://github.com/volvo-cars/automotive-media-sample) — sample media application for Android Automotive.
-- [`web-platform-examples`](https://github.com/volvo-cars/web-platform-examples) — jump-start examples for app development.
-- [`sample-android-automotive-wearable-monitoring`](https://github.com/volvo-cars/sample-android-automotive-wearable-monitoring) — Android Automotive + wearables sample.
-- [`coppercomm`](https://github.com/volvo-cars/coppercomm), [`remoteperf`](https://github.com/volvo-cars/remoteperf), [`pkcs11-utils`](https://github.com/volvo-cars/pkcs11-utils) — engineering tooling open-sourced by Volvo Cars teams.
+## Open an issue
 
-## Support
-
-- Developer Portal: developer.portal@volvocars.com
-- Open Source Program Office: opensource@volvocars.com
-
-## Maintainer
-
-- **FN:** Kin Lane
-- **Email:** info@apievangelist.com
-- **X:** [@apievangelist](https://twitter.com/apievangelist)
-- **URL:** [apievangelist.com](https://apievangelist.com)
-
-specificationVersion: 0.16
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/volvo-cars/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
